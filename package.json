@@ -1,0 +1,69 @@
+{
+  "name": "axe-selector",
+  "version": "0.0.0",
+  "description": "The getSelector method from axe-core 2.x",
+  "keywords": [
+    "axe",
+    "axe-core",
+    "selector",
+    "get-selector",
+    "dom",
+    "browser"
+  ],
+  "license": "MPL-2.0",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "dev": "karma start",
+    "test": "karma start --single-run",
+    "test:ci": "karma start --single-run --browsers ChromeHeadless",
+    "build": "tsc",
+    "lint": "tslint --project tsconfig.json --format codeFrame 'src/**/*.ts'",
+    "fmt": "prettier --write *.{md,js,json} 'src/**/*.ts'",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^10.10.1",
+    "husky": "^1.0.0",
+    "karma": "^3.0.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-cli": "^1.0.1",
+    "karma-mocha": "^1.3.0",
+    "karma-spec-reporter": "0.0.32",
+    "karma-typescript": "^3.0.13",
+    "lint-staged": "^7.3.0",
+    "mocha": "^5.2.0",
+    "prettier": "^1.14.3",
+    "ts-node": "^7.0.1",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.15.0",
+    "tslint-config-standard": "^8.0.1",
+    "typescript": "^3.0.3"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "printWidth": 70,
+    "bracketSpacing": true,
+    "useTabs": false,
+    "trailingComma": "none",
+    "arrowParens": "avoid"
+  },
+  "lint-staged": {
+    "*.{md,js,json}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.ts": [
+      "tslint --fix",
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}
