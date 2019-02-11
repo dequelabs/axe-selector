@@ -17,6 +17,9 @@ $ npm install --save axe-selector
 ```js
 import getSelector from 'axe-selector'
 
+// or with CommonJS:
+const getSelector = require('axe-selector').default
+
 const el = getDOMElementSomehow()
 
 // Generate a selector.
