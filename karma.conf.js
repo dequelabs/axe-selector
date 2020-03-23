@@ -12,8 +12,7 @@ module.exports = config =>
 
     karmaTypescriptConfig: {
       compilerOptions: {
-        ...tsconfig.compilerOptions,
-        allowJs: true
+        ...tsconfig.compilerOptions
       }
     }
   })
