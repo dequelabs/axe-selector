@@ -11,8 +11,6 @@ module.exports = config =>
     browsers: ['Chrome'],
 
     karmaTypescriptConfig: {
-      compilerOptions: {
-        ...tsconfig.compilerOptions
-      }
+      compilerOptions: tsconfig.compilerOptions
     }
   })
