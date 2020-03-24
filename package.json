@@ -1,6 +1,6 @@
 {
   "name": "axe-selector",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The getSelector method from axe-core 2.x",
   "keywords": [
     "axe",
