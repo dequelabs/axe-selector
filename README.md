@@ -26,6 +26,21 @@ const el = getDOMElementSomehow()
 const selector = getSelector(el)
 ```
 
+## Releasing
+
+To create a new production release, run the following commands:
+
+```bash
+git checkout develop
+git pull
+git fetch --tags
+git checkout -b my-release-branch
+npm run release
+git push
+```
+
+Create a pull request into master from your release branch and request a review from `dequelabs/html-team`
+
 ## License
 
 MPL-2.0
