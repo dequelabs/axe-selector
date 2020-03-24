@@ -30,7 +30,10 @@ const matchesSelector = (
     return element.webkitMatchesSelector(selector)
   }
 
+  // Need to ignore in order to support IE9
+  // @ts-ignore
   if (element.msMatchesSelector) {
+    // @ts-ignore
     return element.msMatchesSelector(selector)
   }
 
